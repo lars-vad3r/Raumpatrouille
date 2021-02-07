@@ -29,7 +29,7 @@ effects.starField.startScreenEffect()
 Raumpatrouille = sprites.create(assets.image`Raumpatrouille`, SpriteKind.Player)
 controller.moveSprite(Raumpatrouille)
 Raumpatrouille.setFlag(SpriteFlag.StayInScreen, true)
-game.onUpdateInterval(5000, function () {
+game.onUpdateInterval(randint(10000, 100000), function () {
     spaceDonut = sprites.createProjectileFromSide(assets.image`Spacedonut`, 0, 50)
     spaceDonut.x = randint(5, 155)
     spaceDonut.vy = randint(50, 100)
@@ -38,6 +38,6 @@ game.onUpdateInterval(5000, function () {
 game.onUpdateInterval(1000, function () {
     enemyUFO = sprites.createProjectileFromSide(assets.image`enemyUFO`, 0, 50)
     enemyUFO.x = randint(5, 155)
-    enemyUFO.vy = randint(50, 100)
+    enemyUFO.vy = randint(50, 150)
     enemyUFO.setKind(SpriteKind.Enemy)
 })
