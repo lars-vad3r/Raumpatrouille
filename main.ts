@@ -8,7 +8,7 @@ sprites.onOverlap(SpriteKind.Enemy, SpriteKind.Projectile, function (sprite, oth
     otherSprite.destroy()
 })
 sprites.onOverlap(SpriteKind.Food, SpriteKind.Projectile, function (sprite, otherSprite) {
-    info.changeScoreBy(-10)
+    info.changeScoreBy(-20)
     sprite.destroy()
     otherSprite.destroy()
 })
